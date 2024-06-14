@@ -1,5 +1,5 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component, Input, numberAttribute } from '@angular/core';
+import { Component, HostBinding, Input, numberAttribute } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
@@ -14,4 +14,7 @@ export class ProductCardComponent {
   @Input() company!: string;
   @Input() imgUrl!: string;
   @Input({ transform: numberAttribute }) price!: number;
+
+  @HostBinding('class')
+  class = 'product-card';
 }
