@@ -1,1 +1,1 @@
-<app-product-list [products]="products" (view)="onView($event)"></app-product-list>
+<app-product-list [products]="(products$ | async) || []" (view)="onView($event)"></app-product-list>
