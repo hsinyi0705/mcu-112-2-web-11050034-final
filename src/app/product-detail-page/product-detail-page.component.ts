@@ -1,6 +1,7 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, Input, OnInit, inject, numberAttribute } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProductService } from '../services/product.services';
 import { Product } from './../model/product';
 
 @Component({
@@ -10,17 +11,19 @@ import { Product } from './../model/product';
   templateUrl: './product-detail-page.component.html',
   styleUrl: './product-detail-page.component.css',
 })
-export class ProductDetailPageComponent {
-  product = new Product({
-    id: 1,
-    productName: 'A 產品',
-    authors: ['作者A、作者B、作者C'],
-    company: '博碩文化',
-    imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text:img',
-    price: 1580,
-  });
+export class ProductDetailPageComponent implements OnInit {
+  @Input({ transform: numberAttribute })
+  id!: number;
+
+  product!: Product;
+
+  private productService = inject(ProductService);
 
   private router = inject(Router);
+
+  ngOnInit(): void {
+    this.product = this.productService.getById(this.id);
+  }
 
   onBack(): void {
     this.router.navigate(['products']);
