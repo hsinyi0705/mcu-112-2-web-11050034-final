@@ -9,6 +9,7 @@ import { Component, HostBinding, Input, numberAttribute } from '@angular/core';
   styleUrl: './product-card.component.css',
 })
 export class ProductCardComponent {
+  @Input({ required: true, transform: numberAttribute }) id!: number;
   @Input() productName!: string;
   @Input() authors!: string;
   @Input() company!: string;
