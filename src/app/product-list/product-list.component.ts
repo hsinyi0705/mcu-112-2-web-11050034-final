@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../model/product';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { SearchComponent } from '../search/search.component';
@@ -13,4 +13,7 @@ import { SearchComponent } from '../search/search.component';
 export class ProductListComponent {
   @Input({ required: true })
   products!: Product[];
+
+  @Output()
+  view = new EventEmitter<Product>();
 }
