@@ -5,7 +5,7 @@ import { Subject, startWith, switchMap } from 'rxjs';
 
 import { Product } from '../model/product';
 import { ProductListComponent } from '../product-list/product-list.component';
-import { ProductService } from '../services/product.services';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product-page',
@@ -27,6 +27,6 @@ export class ProductPageComponent {
   );
 
   onView(product: Product): void {
-    this.router.navigate(['product', product.id]);
+    this.router.navigate(['product', 'view', product.id]);
   }
 }

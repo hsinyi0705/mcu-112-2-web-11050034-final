@@ -1,7 +1,7 @@
 import { CurrencyPipe } from '@angular/common';
 import { Component, Input, OnInit, inject, numberAttribute } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductService } from '../services/product.services';
+import { ProductService } from '../services/product.service';
 import { Product } from './../model/product';
 
 @Component({

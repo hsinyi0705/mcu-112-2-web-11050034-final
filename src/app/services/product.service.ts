@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, delay, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Product } from '../model/product';
 
 @Injectable({
@@ -12,7 +12,7 @@ export class ProductService {
       productName: 'A 產品',
       authors: ['作者A、作者B、作者C'],
       company: '博碩文化',
-      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text:img',
+      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
       price: 1580,
     }),
     new Product({
@@ -20,7 +20,7 @@ export class ProductService {
       productName: 'B 產品',
       authors: ['作者A、作者B、作者C'],
       company: '博碩文化',
-      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text:img',
+      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
       price: 1580,
     }),
     new Product({
@@ -28,7 +28,7 @@ export class ProductService {
       productName: 'C 產品',
       authors: ['作者A、作者B、作者C'],
       company: '博碩文化',
-      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text:img',
+      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
       price: 1580,
     }),
     new Product({
@@ -36,7 +36,7 @@ export class ProductService {
       productName: 'D 產品',
       authors: ['作者A、作者B、作者C'],
       company: '博碩文化',
-      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text:img',
+      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
       price: 1580,
     }),
     new Product({
@@ -44,7 +44,7 @@ export class ProductService {
       productName: 'E 產品',
       authors: ['作者A、作者B、作者C'],
       company: '博碩文化',
-      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text:img',
+      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
       price: 1580,
     }),
   ];
@@ -55,6 +55,6 @@ export class ProductService {
   }
 
   getList(): Observable<Product[]> {
-    return of(this._data).pipe(delay(2000));
+    return of(this._data);
   }
 }
