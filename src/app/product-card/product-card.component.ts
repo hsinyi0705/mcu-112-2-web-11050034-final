@@ -11,7 +11,7 @@ import { Component, HostBinding, Input, numberAttribute } from '@angular/core';
 export class ProductCardComponent {
   @Input({ required: true, transform: numberAttribute }) id!: number;
   @Input() productName!: string;
-  @Input() authors!: string;
+  @Input() authors!: string[];
   @Input() company!: string;
   @Input() imgUrl!: string;
   @Input({ transform: numberAttribute }) price!: number;

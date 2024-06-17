@@ -5,7 +5,13 @@
   <strong> {{ productName }} </strong>
 </div>
 
-<div>{{ authors }}</div>
+<div>
+  @for (author of authors; track author) {
+  <span>{{ author }}</span>
+  @if (!$last) {
+  <span>、</span>
+  } }
+</div>
 
 <div class="company">
   <span>{{ company }}</span>

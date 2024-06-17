@@ -7,7 +7,7 @@ export class Product {
 
   productName!: string;
 
-  authors!: string;
+  authors!: string[];
 
   company!: string;
 
