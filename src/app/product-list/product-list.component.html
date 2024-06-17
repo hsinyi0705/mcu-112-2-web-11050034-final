@@ -1,6 +1,8 @@
 <app-search></app-search>
 
 <div class="container">
+  @for (product of products; track product.id){
+
   <app-product-card
     [id]="product.id"
     [productName]="product.productName"
@@ -9,36 +11,5 @@
     [imgUrl]="product.imgUrl"
     [price]="product.price"
   ></app-product-card>
-  <app-product-card
-    [id]="product.id"
-    [productName]="product.productName"
-    [authors]="product.authors"
-    [company]="product.company"
-    [imgUrl]="product.imgUrl"
-    [price]="product.price"
-  ></app-product-card>
-  <app-product-card
-    [id]="product.id"
-    [productName]="product.productName"
-    [authors]="product.authors"
-    [company]="product.company"
-    [imgUrl]="product.imgUrl"
-    [price]="product.price"
-  ></app-product-card>
-  <app-product-card
-    [id]="product.id"
-    [productName]="product.productName"
-    [authors]="product.authors"
-    [company]="product.company"
-    [imgUrl]="product.imgUrl"
-    [price]="product.price"
-  ></app-product-card>
-  <app-product-card
-    [id]="product.id"
-    [productName]="product.productName"
-    [authors]="product.authors"
-    [company]="product.company"
-    [imgUrl]="product.imgUrl"
-    [price]="product.price"
-  ></app-product-card>
+  }
 </div>
