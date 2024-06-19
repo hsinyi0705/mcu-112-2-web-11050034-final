@@ -1,3 +1,11 @@
+<div class="toolbar">
+  <span>
+    <input type="text" placeholder="產品名稱查詢" [formControl]="formControl" />
+    <button type="button" (click)="condition = formControl.value">查詢</button>
+  </span>
+</div>
+<!--pre>{{ formControl.value | json }}</pre-->
+
 <app-product-list
   [products]="(products$ | async) || []"
   [totalCount]="(totalCount$ | async) || 0"
