@@ -21,9 +21,18 @@ export class ProductPageComponent {
 
   private readonly refresh$ = new Subject<void>();
 
+  protected pageSize = 5;
+
+  pageIndex = 1;
+
   readonly products$ = this.refresh$.pipe(
     startWith(undefined),
     switchMap(() => this.productService.getList(undefined, 1, 5))
+  );
+
+  readonly totalCount$ = this.refresh$.pipe(
+    startWith(undefined),
+    switchMap(() => this.productService.getCount())
   );
 
   onView(product: Product): void {

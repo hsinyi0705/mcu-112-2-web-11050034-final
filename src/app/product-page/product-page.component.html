@@ -1,1 +1,7 @@
-<app-product-list [products]="(products$ | async) || []" (view)="onView($event)"></app-product-list>
+<app-product-list
+  [products]="(products$ | async) || []"
+  [totalCount]="(totalCount$ | async) || 0"
+  [(pageIndex)]="pageIndex"
+  [pageSize]="pageSize"
+  (view)="onView($event)"
+></app-product-list>
