@@ -10,7 +10,7 @@
 }
 
 .product-card {
-  flex-basis: calc(20% - 40px);
+  flex-basis: calc(20% - 60px);
 }
 
 div.data-empty {
