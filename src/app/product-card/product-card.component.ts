@@ -1,10 +1,10 @@
-import { CurrencyPipe } from '@angular/common';
+import { CurrencyPipe, NgFor } from '@angular/common';
 import { Component, EventEmitter, HostBinding, Input, Output, numberAttribute } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [CurrencyPipe],
+  imports: [CurrencyPipe, NgFor],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.css',
 })
@@ -21,4 +21,11 @@ export class ProductCardComponent {
 
   @Output()
   view = new EventEmitter<void>();
+
+  @Output()
+  addToCart = new EventEmitter<void>();
+
+  onAddToCart(): void {
+    this.addToCart.emit();
+  }
 }

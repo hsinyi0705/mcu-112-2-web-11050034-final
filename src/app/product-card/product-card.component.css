@@ -26,7 +26,7 @@ div.button button {
   cursor: pointer;
 }
 
-button.addcart {
+div.button .addcart {
   background-color: #007bff;
   color: white;
 }

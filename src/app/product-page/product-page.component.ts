@@ -2,6 +2,7 @@ import { AsyncPipe, JsonPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Subject, combineLatest, startWith, switchMap, tap } from 'rxjs';
+import { ShoppingCartService } from './../services/shopping-cart.service';
 
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Product } from '../model/product';
@@ -19,6 +20,8 @@ export class ProductPageComponent {
   router = inject(Router);
 
   private productService = inject(ProductService);
+
+  private shoppingCartService = inject(ShoppingCartService);
 
   private readonly refresh$ = new Subject<void>();
 
@@ -66,5 +69,9 @@ export class ProductPageComponent {
 
   onView(product: Product): void {
     this.router.navigate(['product', 'view', product.id]);
+  }
+
+  addToCart(product: Product): void {
+    this.shoppingCartService.addProduct(product);
   }
 }

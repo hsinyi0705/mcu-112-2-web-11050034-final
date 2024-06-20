@@ -1,2 +1,5 @@
 <a [routerLink]="['products']" routerLinkActive="router-link-active">產品清單</a>
-<a [routerLink]="['shopping-cart']" routerLinkActive="router-link-active">購物車</a>
+<a [routerLink]="['shopping-cart']" routerLinkActive="router-link-active">
+  <span> 購物車 </span>
+  <span class="count"> {{ shoppingCartService.data.length }} </span>
+</a>
