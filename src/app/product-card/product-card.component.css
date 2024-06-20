@@ -15,7 +15,11 @@ div.button {
   justify-content: space-between;
 }
 
-div.content {
+.vendue {
+  color: red;
+}
+
+.not-vendue {
   color: black;
 }
 

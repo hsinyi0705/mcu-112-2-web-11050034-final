@@ -2,7 +2,7 @@
   <img [src]="imgUrl" />
 
   <div class="content">
-    <strong> {{ productName }} </strong>
+    <strong [class.vendue]="vendue" [class.not-vendue]="!vendue"> {{ productName }} </strong>
   </div>
 
   <div>

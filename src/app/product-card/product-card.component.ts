@@ -19,6 +19,9 @@ export class ProductCardComponent {
   @Input({ transform: booleanAttribute })
   isShow!: boolean;
 
+  @Input({ transform: booleanAttribute })
+  vendue!: boolean;
+
   @HostBinding('class')
   class = 'product-card';
 
