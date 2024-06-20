@@ -23,8 +23,8 @@ export class ProductRemoteService extends ProductService {
     return this.httpClient.get<Product[]>(this.url, { params });
   }
 
-  override getCount(name?: string): Observable<number> {
-    const option = name ? { params: new HttpParams().set('name', name) } : {};
+  override getCount(productName?: string): Observable<number> {
+    const option = productName ? { params: new HttpParams().set('productName', productName) } : {};
     return this.httpClient.get<Product[]>(this.url, option).pipe(map((data) => data.length));
   }
 }
