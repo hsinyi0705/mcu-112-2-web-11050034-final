@@ -2,6 +2,7 @@ import { CurrencyPipe } from '@angular/common';
 import { Component, Input, OnInit, inject, numberAttribute } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from '../services/product.service';
+import { ShoppingCartService } from '../services/shopping-cart.service';
 import { Product } from './../model/product';
 
 @Component({
@@ -19,6 +20,8 @@ export class ProductDetailPageComponent implements OnInit {
 
   private productService = inject(ProductService);
 
+  private shoppingCartService = inject(ShoppingCartService);
+
   private router = inject(Router);
 
   ngOnInit(): void {
@@ -27,5 +30,9 @@ export class ProductDetailPageComponent implements OnInit {
 
   onBack(): void {
     this.router.navigate(['products']);
+  }
+
+  addToCart(product: Product): void {
+    this.shoppingCartService.addProduct(product);
   }
 }
