@@ -1,28 +1,46 @@
-<div class="container">
+<div class="container" [formGroup]="form">
   <section class="form">
     <h3>基本資料</h3>
 
     <div class="form-item">
       <label>姓名</label>
-      <input type="text" />
+      <input type="text" formControlName="name" />
     </div>
 
     <div class="form-item">
       <label>地址</label>
-      <input type="text" />
+      <input type="text" formControlName="address" />
     </div>
 
     <div class="form-item">
       <label>電話</label>
-      <input type="text" />
+      <input type="text" formControlName="telephone" />
     </div>
   </section>
 
   <section class="detail">
     <h3>購買項目</h3>
+
+    @for (control of details.controls; track $index) {
+    <div class="item" formArrayName="details">
+      <ng-container [formGroupName]="$index">
+        <div class="id">{{ control.value.id }}</div>
+        <div class="name">{{ control.value.product?.productName }}</div>
+        <div class="count">
+          <input type="number" formControlName="count" />
+        </div>
+        <div class="price">{{ control.value.price | currency }}</div>
+        <div class="delete">
+          <button type="button" (click)="details.removeAt($index)">刪除</button>
+        </div>
+      </ng-container>
+    </div>
+    }
   </section>
 </div>
 
 <div class="tool-bar">
   <button>送出訂單</button>
 </div>
+
+<pre>{{ shoppingCartService.data| json }}</pre>

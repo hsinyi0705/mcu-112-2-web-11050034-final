@@ -55,6 +55,42 @@ div.form-item > input[type='text'] {
   font-size: 20px;
 }
 
+div.id {
+  flex-basis: 100px;
+  text-align: center;
+}
+
+div.name {
+  flex-grow: 1;
+}
+
+div.count {
+  flex-basis: 200px;
+  text-align: center;
+}
+
+div.count > input[type='number'] {
+  padding: 5px;
+  width: 150px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+div.delete {
+  flex-basis: 80px;
+  text-align: center;
+}
+
+div.delete button {
+  padding: 4px;
+  font-size: 14px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #ba1a1a;
+  border: 1px solid #ba1a1a;
+}
+
 .tool-bar {
   margin-top: 50px;
   text-align: center;
