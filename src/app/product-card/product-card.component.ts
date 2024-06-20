@@ -1,10 +1,10 @@
-import { CurrencyPipe, NgFor } from '@angular/common';
-import { Component, EventEmitter, HostBinding, Input, Output, numberAttribute } from '@angular/core';
+import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
+import { Component, EventEmitter, HostBinding, Input, Output, booleanAttribute, numberAttribute } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [CurrencyPipe, NgFor],
+  imports: [CurrencyPipe, NgFor, NgIf],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.css',
 })
@@ -15,6 +15,9 @@ export class ProductCardComponent {
   @Input() company!: string;
   @Input() imgUrl!: string;
   @Input({ transform: numberAttribute }) price!: number;
+
+  @Input({ transform: booleanAttribute })
+  isShow!: boolean;
 
   @HostBinding('class')
   class = 'product-card';

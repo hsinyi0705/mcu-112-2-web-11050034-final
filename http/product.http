@@ -17,7 +17,9 @@ Content-Type: application/json
   "authors": ["作者A、作者B、作者C"],
   "company": "博碩文化",
   "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
-  "price": 1580
+  "price": 1580,
+  "isShow": true,
+  "vendue": false
 }
 
 ###
@@ -31,7 +33,9 @@ Content-Type: application/json
   "authors": ["作者A","作者B"],
   "company": "博碩文化",
   "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
-  "price": 1580
+  "price": 1580,
+  "isShow": true,
+  "vendue": true
 }
 
 ###

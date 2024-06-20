@@ -1,24 +1,26 @@
-<img [src]="imgUrl" />
+<ng-container *ngIf="isShow">
+  <img [src]="imgUrl" />
 
-<div class="content">
-  <!-- <strong> {{ id }}.{{ productName }} </strong> -->
-  <strong> {{ productName }} </strong>
-</div>
+  <div class="content">
+    <!-- <strong> {{ id }}.{{ productName }} </strong> -->
+    <strong> {{ productName }} </strong>
+  </div>
 
-<div>
-  @for (author of authors; track author) {
-  <span>{{ author }}</span>
-  @if (!$last) {
-  <span>、</span>
-  } }
-</div>
+  <div>
+    @for (author of authors; track author) {
+    <span>{{ author }}</span>
+    @if (!$last) {
+    <span>、</span>
+    } }
+  </div>
 
-<div class="company">
-  <span>{{ company }}</span>
-  <span>{{ price | currency }}</span>
-</div>
+  <div class="company">
+    <span>{{ company }}</span>
+    <span>{{ price | currency }}</span>
+  </div>
 
-<div class="button">
-  <button type="button" (click)="view.emit()">明細</button>
-  <button type="button" class="addcart" (click)="onAddToCart()">加入購物車</button>
-</div>
+  <div class="button">
+    <button type="button" (click)="view.emit()">明細</button>
+    <button type="button" class="addcart" (click)="onAddToCart()">加入購物車</button>
+  </div>
+</ng-container>

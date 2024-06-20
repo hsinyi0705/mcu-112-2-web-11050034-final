@@ -10,16 +10,21 @@
       ],
       "company": "博碩文化",
       "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
-      "price": 1580
+      "price": 1580,
+      "isShow": true,
+      "vendue": false
     },
     {
       "productName": "B產品",
       "authors": [
-        "作者A、作者B、作者C"
+        "作者A",
+        "作者B"
       ],
       "company": "博碩文化",
       "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
       "price": 1580,
+      "isShow": true,
+      "vendue": true,
       "id": 2
     },
     {
@@ -30,6 +35,8 @@
       "company": "博碩文化",
       "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
       "price": 1580,
+      "isShow": true,
+      "vendue": true,
       "id": 3
     },
     {
@@ -40,6 +47,8 @@
       "company": "博碩文化",
       "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
       "price": 1580,
+      "isShow": false,
+      "vendue": true,
       "id": 4
     },
     {
@@ -50,6 +59,8 @@
       "company": "博碩文化",
       "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
       "price": 1580,
+      "isShow": true,
+      "vendue": false,
       "id": 5
     },
     {
@@ -60,7 +71,45 @@
       "company": "博碩文化",
       "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
       "price": 1580,
+      "isShow": true,
+      "vendue": false,
       "id": 6
+    },
+    {
+      "productName": "G產品",
+      "authors": [
+        "作者A、作者B、作者C"
+      ],
+      "company": "博碩文化",
+      "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
+      "price": 1580,
+      "isShow": false,
+      "vendue": false,
+      "id": 7
+    },
+    {
+      "productName": "H產品",
+      "authors": [
+        "作者A、作者B、作者C"
+      ],
+      "company": "博碩文化",
+      "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
+      "price": 1580,
+      "isShow": true,
+      "vendue": false,
+      "id": 8
+    },
+    {
+      "productName": "I產品",
+      "authors": [
+        "作者A、作者B、作者C"
+      ],
+      "company": "博碩文化",
+      "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
+      "price": 1580,
+      "isShow": true,
+      "vendue": false,
+      "id": 9
     }
   ]
 }

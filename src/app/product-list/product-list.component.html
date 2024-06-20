@@ -8,6 +8,7 @@
     [company]="product.company"
     [imgUrl]="product.imgUrl"
     [price]="product.price"
+    [isShow]="product.isShow"
     (view)="view.emit(product)"
     (addToCart)="onAddToCart(product)"
   ></app-product-card>
