@@ -49,3 +49,8 @@ button.addcart {
   background-color: #007bff;
   color: white;
 }
+
+.vendue {
+  color: red;
+  margin-left: 20px;
+}

@@ -22,6 +22,8 @@
   <div>
     <strong>價格</strong>
     <span>{{ product.price | currency }}</span>
+    <span *ngIf="product.vendue === true" class="vendue">特價</span>
+    <!--pre>{{ product.vendue| json }}</!--pre-->
   </div>
 
   <div class="button">
