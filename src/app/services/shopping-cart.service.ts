@@ -7,6 +7,9 @@ import { ShoppingItem } from '../model/shopping-item';
   providedIn: 'root',
 })
 export class ShoppingCartService {
+  clear() {
+    throw new Error('Method not implemented.');
+  }
   data: ShoppingItem[] = [];
 
   addProduct(product: Product): void {
