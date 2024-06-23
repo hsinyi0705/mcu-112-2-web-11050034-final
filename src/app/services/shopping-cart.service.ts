@@ -7,9 +7,6 @@ import { ShoppingItem } from '../model/shopping-item';
   providedIn: 'root',
 })
 export class ShoppingCartService {
-  clear() {
-    throw new Error('Method not implemented.');
-  }
   data: ShoppingItem[] = [];
 
   addProduct(product: Product): void {
@@ -25,5 +22,9 @@ export class ShoppingCartService {
 
   removeProduct(id: number): void {
     this.data = [...this.data.filter((item) => item.id !== id)];
+  }
+
+  clear(): void {
+    this.data = [];
   }
 }
