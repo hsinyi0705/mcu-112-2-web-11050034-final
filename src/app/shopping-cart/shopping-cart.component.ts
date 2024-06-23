@@ -87,4 +87,9 @@ export class ShoppingCartComponent implements OnInit {
   onSave(): void {
     console.log('Save');
   }
+
+  onDelete(index: number, id: number): void {
+    this.details.removeAt(index);
+    this.shoppingCartService.removeProduct(id);
+  }
 }
