@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output, numberAttribute } from '@angular/core';
 import { Product } from '../model/product';
 import { PaginationComponent } from '../pagination/pagination.component';
@@ -8,7 +8,7 @@ import { SearchComponent } from '../search/search.component';
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [SearchComponent, ProductCardComponent, PaginationComponent, NgFor],
+  imports: [SearchComponent, ProductCardComponent, PaginationComponent, NgFor, NgIf],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css',
 })

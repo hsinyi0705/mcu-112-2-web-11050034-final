@@ -1,18 +1,20 @@
 <div class="container">
   @for (product of products; track product.id){
+  <ng-container *ngIf="product.isShow">
+    <app-product-card
+      [id]="product.id"
+      [productName]="product.productName"
+      [authors]="product.authors"
+      [company]="product.company"
+      [imgUrl]="product.imgUrl"
+      [price]="product.price"
+      [isShow]="product.isShow"
+      [vendue]="product.vendue"
+      (view)="view.emit(product)"
+      (addToCart)="onAddToCart(product)"
+    ></app-product-card>
+  </ng-container>
 
-  <app-product-card
-    [id]="product.id"
-    [productName]="product.productName"
-    [authors]="product.authors"
-    [company]="product.company"
-    [imgUrl]="product.imgUrl"
-    [price]="product.price"
-    [isShow]="product.isShow"
-    [vendue]="product.vendue"
-    (view)="view.emit(product)"
-    (addToCart)="onAddToCart(product)"
-  ></app-product-card>
   } @empty {
   <div class="data-empty">無產品資料</div>
   }
